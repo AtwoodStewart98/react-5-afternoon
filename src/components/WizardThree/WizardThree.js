@@ -6,6 +6,7 @@ import { updateProp } from "../../ducks/reducer.js";
 
 class WizardThree extends Component {
   render() {
+    const { updateProp } = this.props;
     return (
       <div className="parent-div">
         <div className="vert-align">

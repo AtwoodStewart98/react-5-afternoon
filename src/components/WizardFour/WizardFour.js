@@ -6,6 +6,7 @@ import { updateFound } from "../../ducks/reducer.js";
 
 class WizardFour extends Component {
   render() {
+    const { updateFound } = this.props;
     return (
       <div className="parent-div">
         <div className="vert-align">

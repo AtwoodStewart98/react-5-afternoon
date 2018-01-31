@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import WizardOne from "./components/WizardOne/WizardOne";
 import WizardTwo from "./components/WizardTwo/WizardTwo";
 import WizardThree from "./components/WizardThree/WizardThree";
@@ -14,7 +14,6 @@ import WizardEleven from "./components/WizardEleven/WizardEleven";
 import Finish from "./components/Finish/Finish";
 
 import NextBtn from "./components/NextBtn/NextBtn";
-import { Switch, Route } from "react-router-dom";
 
 export default (
   <HashRouter>

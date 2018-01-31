@@ -6,6 +6,7 @@ import { updateCity } from "../../ducks/reducer.js";
 
 class WizardTwo extends Component {
   render() {
+    const { updateCity } = this.props;
     return (
       <div className="parent-div">
         <div className="vert-align">
@@ -28,8 +29,10 @@ class WizardTwo extends Component {
 }
 
 function mapStateToProps(state) {
+  const { city } = state;
+
   return {
-    city: state.city
+    city
   };
 }
 
