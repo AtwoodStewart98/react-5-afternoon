@@ -20,6 +20,8 @@ const initialState = {
 const UPDATE_LOAN_TYPE = "UPDATE_LOAN_TYPE";
 const UPDATE_PROPERTY_TYPE = "UPDATE_PROPERTY_TYPE";
 const UPDATE_CITY = "UPDATE_CITY";
+const UPDATE_PROP = "UPDATE_PROP";
+const UPDATE_FOUND = "UPDATE_FOUND";
 
 export function updateLoanType(loanType) {
   return {
@@ -42,6 +44,20 @@ export function updateCity(city) {
   };
 }
 
+export function updateProp(prop) {
+  return {
+    type: UPDATE_PROP,
+    payload: prop
+  };
+}
+
+export function updateFound(found) {
+  return {
+    type: UPDATE_FOUND,
+    payload: found
+  };
+}
+
 function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_LOAN_TYPE:
@@ -53,6 +69,11 @@ function reducer(state = initialState, action) {
     case UPDATE_CITY:
       return Object.assign({}, state, { city: action.payload });
       break;
+    case UPDATE_PROP:
+      return Object.assign({}, state, { propToBeUsedOn: action.payload });
+      break;
+    case UPDATE_FOUND:
+      return Object.assign({}, state, { found: action.payload });
     default:
       return state;
   }
